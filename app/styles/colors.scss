@@ -1,0 +1,38 @@
+:root {
+  --abs-white: #fff;
+  --abs-black: #fff;
+
+  --purple-60: rgb(112, 59, 247);
+  color: rgb(251, 250, 255);
+
+  --purple-65: rgb(from var(--purple-60) calc(r + 18) calc(g + 25) calc(b + 1));
+  --purple-70: rgb(from var(--purple-60) calc(r + 36) calc(g + 49) calc(b + 2));
+  --purple-75: rgb(from var(--purple-60) calc(r + 54) calc(g + 74) calc(b + 3));
+
+  --purple-90: rgb(
+    from var(--purple-60) calc(r + 107) calc(g + 147) calc(b + 6)
+  );
+  --purple-95: rgb(
+    from var(--purple-60) calc(r + 125) calc(g + 172) calc(b + 7)
+  );
+  --purple-97: rgb(
+    from var(--purple-60) calc(r + 132) calc(g + 182) calc(b + 7)
+  );
+  --purple-99: rgb(
+    from var(--purple-60) calc(r + 139) calc(g + 191) calc(b + 8)
+  );
+
+  --white90: #e4e4e7;
+  --white95: #f1f1f3;
+  --white97: #f7f7f8;
+  --white99: #fcfcfd;
+
+  --grey-08: #141414;
+  --grey-10: rgb(from var(--grey-08) calc(r + 6) calc(g + 6) calc(b + 6));
+  --grey-15: rgb(from var(--grey-08) calc(r + 18) calc(g + 18) calc(b + 18));
+  --grey-20: rgb(from var(--grey-08) calc(r + 31) calc(g + 31) calc(b + 31));
+  --grey-30: rgb(from var(--grey-08) calc(r + 47) calc(g + 47) calc(b + 47));
+  --grey-40: rgb(from var(--grey-08) calc(r + 82) calc(g + 82) calc(b + 82));
+  --grey-50: rgb(from var(--grey-08) calc(r + 108) calc(g + 108) calc(b + 108));
+  --grey-60: rgb(from var(--grey-08) calc(r + 133) calc(g + 133) calc(b + 133));
+}
