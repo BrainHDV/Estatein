@@ -37,10 +37,12 @@ const CustomLink = (props: ICustomLinkProps) => {
     }
   };
 
-  const getLinkSize = (color: ICustomLinkSize) => {
-    switch (color) {
+  const getLinkSize = (size: ICustomLinkSize) => {
+    switch (size) {
       case "small":
         return "link-small";
+      case "large":
+        return "link-large";
     }
   };
 

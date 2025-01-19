@@ -1,0 +1,19 @@
+@import "@styles/common";
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.dialog {
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.dialog__close-btn {
+  align-self: flex-end;
+}

@@ -1,8 +1,6 @@
-import Dialog from "@components/Dialog/Dialog";
 import React, { ReactNode } from "react";
-import { nav } from "../Header/Header";
-import CustomLink from "@components/CustomLink/CustomLink";
-import { usePathname } from "next/navigation";
+import Dialog from "@components/Dialog/Dialog";
+import "./HeaderDialog.scss";
 
 interface IHeaderDialogProps {
   open: boolean;
@@ -14,7 +12,7 @@ const HeaderDialog = (props: IHeaderDialogProps) => {
   const { open, children, onClose } = props;
 
   return (
-    <Dialog openModal={open} closeModal={onClose}>
+    <Dialog className="header-dialog" openModal={open} closeModal={onClose}>
       {children}
     </Dialog>
   );

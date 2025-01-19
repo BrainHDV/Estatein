@@ -6,6 +6,8 @@ body {
   display: flex;
   flex-direction: column;
 
+  min-width: rem(390);
+  overflow: hidden;
   background: var(--grey-08);
   color: var(--abs-white);
 }

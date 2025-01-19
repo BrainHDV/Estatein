@@ -1,6 +1,19 @@
-import { useEffect, useRef } from "react";
+import clsx from "clsx";
+import { ReactNode, useEffect, useRef } from "react";
+import "./Dialog.scss";
+import { CloseIcon } from "@assets/index";
+import IconButton from "@components/IconButton/IconButton";
 
-const Dialog = ({ openModal, closeModal, children }) => {
+interface IDialogProps {
+  className?: string;
+  openModal: boolean;
+  children: ReactNode;
+  closeModal: () => void;
+}
+
+const Dialog = (props: IDialogProps) => {
+  const { className, openModal, closeModal, children } = props;
+
   const ref = useRef(null);
 
   useEffect(() => {
@@ -11,9 +24,15 @@ const Dialog = ({ openModal, closeModal, children }) => {
     }
   }, [openModal]);
   return (
-    <dialog ref={ref} onCancel={closeModal}>
+    <dialog
+      className={clsx("dialog", className)}
+      ref={ref}
+      onCancel={closeModal}
+    >
+      <IconButton className="dialog__close-btn" onClick={closeModal}>
+        <CloseIcon />
+      </IconButton>
       {children}
-      <button onClick={closeModal}>Close</button>
     </dialog>
   );
 };

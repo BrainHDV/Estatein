@@ -21,23 +21,11 @@
   align-items: center;
   gap: rem(10);
 
-  transition: transform var(--transition-duration-long)
-    var(--transition-easing);
-
   @include sm {
     visibility: hidden;
     position: fixed;
     transform: translateX(-500%);
   }
-}
-
-.header__nav-mobile {
-  visibility: visible;
-  background-color: red;
-  top: 0;
-  left: 0;
-  transform: translateX(0);
-  z-index: 1000;
 }
 
 .header-inner {
@@ -67,4 +55,13 @@
   align-items: center;
   gap: rem(6);
   margin-inline: auto;
+}
+
+.header__nav-list--mobile {
+  display: flex;
+  align-items: center;
+
+  gap: rem(20);
+  flex-direction: column;
+  margin-block: auto;
 }

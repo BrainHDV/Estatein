@@ -9,7 +9,6 @@ import CustomLink from "@components/CustomLink/CustomLink";
 import IconButton from "@components/IconButton/IconButton";
 import "./Header.scss";
 import clsx from "clsx";
-import Dialog from "@components/Dialog/Dialog";
 import HeaderDialog from "../HeaderDialog/HeaderDialog";
 
 export const nav = [
@@ -36,10 +35,7 @@ const Header = () => {
             <Logo />
           </Link>
 
-          <nav
-            className={clsx("header__nav")}
-            // остановился на Dialog
-          >
+          <nav className={clsx("header__nav")}>
             <ul className="header__nav-list">
               {nav.map((link) => {
                 return (
@@ -70,13 +66,14 @@ const Header = () => {
             <BurgerMenuIcon />
           </IconButton>
           <HeaderDialog open={menuOpen} onClose={menuToggle}>
-            <ul className="header__nav-list">
+            <ul className="header__nav-list--mobile">
               {nav.map((link) => {
                 return (
                   <li key={link.title}>
                     <CustomLink
                       className={pathname === link.href && "link-active"}
                       color="secondary"
+                      size="large"
                       variant={pathname === link.href ? "outlined" : "text"}
                       href={link.href}
                     >
