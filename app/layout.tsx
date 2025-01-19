@@ -1,3 +1,6 @@
+import Header from "@components/HeaderUI/Header/Header";
+import HeaderBanner from "@components/HeaderUI/HeaderBanner/HeaderBanner";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <HeaderBanner />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

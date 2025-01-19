@@ -1,0 +1,13 @@
+@import "@styles/common";
+
+.btn-icon {
+  border-radius: 50%;
+  padding: rem(5);
+  aspect-ratio: 1;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    aspect-ratio: 1;
+  }
+}

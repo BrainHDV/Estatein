@@ -1,0 +1,43 @@
+@import "@styles/common";
+
+.link-common {
+  color: var(--abs-white);
+  border: none;
+  text-decoration: none;
+  background: transparent;
+  padding: rem(14) rem(24);
+  border-radius: rem(10);
+  cursor: pointer;
+
+  @include xll {
+    font-size: rem(14);
+    padding: rem(10) rem(20);
+  }
+}
+
+.link-primary {
+  --link-color: var(--purple-60);
+}
+
+.link-secondary {
+  --link-color: var(--grey-15);
+}
+
+.link-small {
+  font-size: rem(14);
+}
+
+.link-text {
+}
+
+.link-outlined {
+  border: rem(1) solid var(--link-color);
+}
+
+.link-contained {
+  background: var(--link-color);
+}
+
+.link-active {
+  background: var(--grey-08);
+}

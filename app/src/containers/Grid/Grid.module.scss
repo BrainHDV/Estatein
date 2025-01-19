@@ -1,0 +1,35 @@
+@import  "@styles/functions";
+
+.wrapper {
+  --gap: clamp(1rem, 3vw, 3rem);
+  --content: min(#{rem(1596)}, 100% - var(--gap) * 2);
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 5rem);
+  --full: minmax(var(--gap), 1fr);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [feature-start] var(--feature)
+    [popout-start] var(--popout)
+    [content-start] var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--feature) [feature-end]
+    var(--full) [full-end];
+}
+
+.content > * {
+  grid-column: content;
+}
+
+.popout > * {
+  grid-column: popout;
+}
+
+.feature > * {
+  grid-column: feature;
+}
+
+.full > * {
+  grid-column: full;
+}
