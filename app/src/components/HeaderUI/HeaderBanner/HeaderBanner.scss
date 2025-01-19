@@ -69,11 +69,6 @@
   transition: background-color var(--transition-duration-short)
     var(--transition-easing);
 
-  // position: absolute;
-  // right: rem(32);
-  // top: 50%;
-  // transform: translateY(-50%);
-
   @include xlm {
     --_action-size: #{rem(26)};
 
@@ -85,8 +80,8 @@
     height: 14px;
 
     @include xlm {
-      width: 9px;
-      height: 9px;
+      width: 10px;
+      height: 10px;
     }
   }
 

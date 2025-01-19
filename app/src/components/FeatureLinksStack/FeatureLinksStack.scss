@@ -1,0 +1,106 @@
+@import "@styles/common";
+
+.feature-links-stack {
+  padding: rem(10);
+  background: var(--grey-10);
+
+  @include md {
+    grid-column: content-start / content-end;
+    border-radius: rem(22);
+  }
+}
+
+.feature-links-stack__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(#{rem(330)}, 1fr));
+  gap: rem(20);
+  padding: rem(20);
+  border: 1px solid var(--grey-15);
+  background: var(--grey-08);
+
+  @include xll {
+    gap: rem(10);
+    padding: rem(10);
+  }
+
+  @include md {
+    border-radius: rem(12);
+  }
+
+  @include xlm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feature-links-stack__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem(20);
+  padding: rem(40) rem(20);
+  border-radius: rem(12);
+  background: var(--grey-10);
+  border: 1px solid var(--grey-15);
+  transition: background-color var(--transition-duration-short)
+    var(--transition-easing);
+
+  position: relative;
+  cursor: pointer;
+
+  @include hover {
+    background: rgba(from var(--grey-10) r g b / 0.2);
+
+    .arrow {
+      color: var(--grey-60);
+    }
+  }
+
+  @include xll {
+    padding: rem(30) rem(16);
+  }
+
+  @include sm {
+    padding: rem(20) rem(14);
+    border-radius: rem(10);
+  }
+
+  .top-icon {
+    --icon-size: #{rem(82)};
+
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    @include xll {
+      --icon-size: #{rem(60)};
+    }
+
+    @include sm {
+      --icon-size: #{rem(48)};
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .label {
+    text-align: center;
+  }
+
+  .arrow {
+    --icon-size: #{rem(20)};
+
+    color: var(--grey-30);
+    width: var(--icon-size);
+    position: absolute;
+    right: rem(20);
+    top: rem(20);
+    transition: color var(--transition-duration-short) var(--transition-easing);
+
+    @include xll {
+      --icon-size: #{rem(16)};
+    }
+  }
+}

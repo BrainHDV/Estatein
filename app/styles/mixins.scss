@@ -97,8 +97,40 @@ $MEDIA: (
   }
 }
 
+@mixin after-hd {
+  @media (min-width: map_get($MEDIA, hd)) {
+    @content;
+  }
+}
+
 @mixin xhd {
   @media (max-width: map_get($MEDIA, xhd)) {
     @content;
+  }
+}
+
+@mixin font-heading1 {
+  font-size: rem(60);
+  font-weight: 600;
+  line-height: 120%;
+
+  @include xll {
+    font-size: rem(46);
+  }
+  @include sm {
+    font-size: rem(28);
+  }
+}
+
+@mixin font-heading3 {
+  font-size: rem(40);
+  font-weight: 600;
+  line-height: 150%;
+
+  @include xll {
+    font-size: rem(30);
+  }
+  @include sm {
+    font-size: rem(24);
   }
 }

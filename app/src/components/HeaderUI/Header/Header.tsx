@@ -60,7 +60,7 @@ const Header = () => {
           <IconButton
             className="nav__mobile"
             color="secondary"
-            size="large"
+            size="x-large"
             onClick={menuToggle}
           >
             <BurgerMenuIcon />
@@ -83,6 +83,9 @@ const Header = () => {
                 );
               })}
             </ul>
+            <CustomLink color="primary" variant="contained" href="/">
+              Contact us
+            </CustomLink>
           </HeaderDialog>
         </div>
       </Grid>

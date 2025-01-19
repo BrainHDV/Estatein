@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 import "./Button.scss";
 
 type IButtonColor = "primary" | "secondary";
-type IButtonSize = "small" | "medium" | "large";
+type IButtonSize = "small" | "medium" | "large" | "x-large";
 type IButtonVariant = "text" | "outlined" | "contained";
 
 export interface IButtonProps {
@@ -43,6 +43,8 @@ const Button = (props: IButtonProps) => {
         return "btn-small";
       case "large":
         return "btn-large";
+      case "x-large":
+        return "btn-x-large";
     }
   };
 

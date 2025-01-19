@@ -1,0 +1,109 @@
+@import "@styles/common";
+
+.main-page__hero {
+}
+
+.main-page__hero-content {
+  display: flex;
+  gap: rem(80);
+
+  @include before-lg {
+    grid-column-end: -1;
+  }
+
+  @include xll {
+    gap: rem(60);
+  }
+
+  @include md {
+    flex-direction: column-reverse;
+    padding-block: rem(40);
+  }
+
+  @include sm {
+    gap: rem(40);
+  }
+
+  .hero-content {
+    max-width: rem(758);
+    padding-block: rem(140);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--grey-08);
+
+    @include xll {
+      padding-block: rem(98);
+    }
+
+    @include md {
+      max-width: 100%;
+    }
+
+    @include sm {
+      padding-block: rem(0);
+    }
+
+    h1 {
+      margin-bottom: rem(24);
+
+      @include sm {
+        margin-block: rem(16);
+      }
+    }
+
+    p {
+      color: var(--grey-60);
+    }
+
+    .btns {
+      display: flex;
+      gap: rem(20);
+
+      @include sm {
+        flex-direction: column;
+        gap: rem(16);
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: rem(60);
+      justify-content: center;
+
+      @include xll {
+        gap: rem(50);
+      }
+
+      @include sm {
+        gap: rem(40);
+      }
+    }
+  }
+
+  .hero-image {
+    --bg-img-pos: 100%;
+
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: var(--bg-img-pos) 100%, auto;
+    background-color: var(--grey-10);
+
+    background-image: url(../../../public/assets/abstract-design-large.png),
+      linear-gradient(225deg, #2a213f 6%, transparent 49%);
+
+    @include md {
+      border-radius: rem(12);
+      border: 1px solid var(--grey-15);
+    }
+
+    img {
+      object-fit: contain;
+      object-position: bottom;
+      max-height: rem(810);
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

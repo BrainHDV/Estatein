@@ -1,0 +1,45 @@
+@import "@styles/common";
+
+.statistics {
+  display: flex;
+  gap: rem(20);
+
+  @include xll {
+    gap: rem(16);
+  }
+
+  @include lg {
+    flex-wrap: wrap;
+    .statistics__item {
+      flex: 1 1 33.3333%;
+    }
+  }
+
+  @include md {
+    gap: rem(12);
+  }
+}
+
+.statistics__item {
+  display: flex;
+  flex-direction: column;
+  gap: rem(2);
+  padding: rem(16) rem(24);
+  background: var(--grey-10);
+  border: 1px solid var(--grey-15);
+  border-radius: rem(12);
+  width: 100%;
+  
+  @include md {
+      text-align: center;
+      padding: rem(16);
+  }
+
+  .title {
+    @include font-heading3;
+  }
+
+  .subtitle {
+    color: var(--grey-60);
+  }
+}
