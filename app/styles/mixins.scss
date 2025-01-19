@@ -1,0 +1,104 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+$MEDIA: (
+  m: 320px,
+  xm: 375px,
+  xlm: 568px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1366px,
+  xll: 1440px,
+  hd: 1920px,
+  xhd: 2560px,
+);
+
+@mixin m {
+  @media (max-width: map_get($MEDIA, m)) {
+    @content;
+  }
+}
+
+@mixin xm {
+  @media (max-width: map_get($MEDIA, xm)) {
+    @content;
+  }
+}
+
+@mixin xlm {
+  @media (max-width: map_get($MEDIA, xlm)) {
+    @content;
+  }
+}
+
+@mixin before-xlm {
+  @media (min-width: map_get($MEDIA, xlm)) {
+    @content;
+  }
+}
+
+@mixin before-sm {
+  @media (min-width: map_get($MEDIA, sm)) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: map_get($MEDIA, sm)) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map_get($MEDIA, md)) {
+    @content;
+  }
+}
+
+@mixin before-md {
+  @media (min-width: map_get($MEDIA, md)) {
+    @content;
+  }
+}
+
+@mixin before-lg {
+  @media (min-width: map_get($MEDIA, lg)) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map_get($MEDIA, lg)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: map_get($MEDIA, xl)) {
+    @content;
+  }
+}
+
+@mixin xll {
+  @media (max-width: map_get($MEDIA, xll)) {
+    @content;
+  }
+}
+
+@mixin hd {
+  @media (max-width: map_get($MEDIA, hd)) {
+    @content;
+  }
+}
+
+@mixin xhd {
+  @media (max-width: map_get($MEDIA, xhd)) {
+    @content;
+  }
+}

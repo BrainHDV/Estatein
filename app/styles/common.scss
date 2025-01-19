@@ -1,17 +1,4 @@
-@use "sass:math";
-
-@function rem($pixel) {
-  @if math.is-unitless($pixel) {
-    @return math.div($pixel, 16) + rem;
-  } @else {
-    @error 'Don\'t use units when using the rem() function; only numbers.';
-  }
-}
-
 @layer reset, default;
 
-@import "fonts.scss";
-@import "reset.scss";
-@import "default.scss";
-@import "colors.scss";
-@import "vars.scss";
+@import "functions";
+@import "mixins";

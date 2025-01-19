@@ -2,8 +2,7 @@
   --abs-white: #fff;
   --abs-black: #fff;
 
-  --purple-60: rgb(112, 59, 247);
-  color: rgb(251, 250, 255);
+  --purple-60: #703bf7;
 
   --purple-65: rgb(from var(--purple-60) calc(r + 18) calc(g + 25) calc(b + 1));
   --purple-70: rgb(from var(--purple-60) calc(r + 36) calc(g + 49) calc(b + 2));

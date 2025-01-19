@@ -1,4 +1,8 @@
 :root {
+  --transition-easing: ease-in-out;
+  --transition-duration-short: 350ms;
+  --transition-duration-long: 1s;
+
   --z-index-header: 1000;
   --z-index-modal: 1300;
 }

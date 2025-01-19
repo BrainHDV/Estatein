@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["app/src/components/*"],
+      "@containers/*": ["app/src/containers/*"],
       "@assets/*": ["public/assets/*"],
       "@styles/*": ["app/styles/*"]
     },
@@ -25,6 +26,7 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["svgr.d.ts", "next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
+
